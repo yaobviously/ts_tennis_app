@@ -10,7 +10,7 @@ import pickle
 
 from trueskillthroughtime import Player, Game
 
-with open('surface_dict_gotta_work.pickle', 'rb') as file:
+with open('smaller_dict.pickle', 'rb') as file:
     ts_dict = pickle.load(file)
 
 with open('players.pickle', 'rb') as players:
@@ -19,10 +19,10 @@ with open('players.pickle', 'rb') as players:
 
 def get_win_prob(p_1='Rafael Nadal', p_2='Pete Sampras', surface='Hard'):
     
-  player_1 = Player(ts_dict[p_1][-1][1])
-  player_1_surface = Player(ts_dict[p_1 + surface][-1][1])
-  player_2 = Player(ts_dict[p_2][-1][1])
-  player_2_surface = Player(ts_dict[p_2 + surface][-1][1])
+  player_1 = Player(ts_dict[p_1][-1])
+  player_1_surface = Player(ts_dict[p_1 + surface][-1])
+  player_2 = Player(ts_dict[p_2][-1])
+  player_2_surface = Player(ts_dict[p_2 + surface][-1])
   
   proba = Game([[player_1, player_1_surface], [player_2, player_2_surface]]).evidence
   return round(proba, 3)
