@@ -10,10 +10,12 @@ import pickle
 
 from trueskillthroughtime import Player, Game
 
-with open('smaller_dict.pickle', 'rb') as file:
+st.set_page_config(page_title="atp")
+
+with open('mens_small_dict.pickle', 'rb') as file:
     ts_dict = pickle.load(file)
 
-with open('players.pickle', 'rb') as players:
+with open('mens_names.pickle', 'rb') as players:
     players = pickle.load(players)
 
 
