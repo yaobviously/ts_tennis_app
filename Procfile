@@ -1,2 +1,2 @@
-web: sh setup.sh && streamlit run true_skill_app.py
+web: sh setup.sh && streamlit run ATP.py
 
