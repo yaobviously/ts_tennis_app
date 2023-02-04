@@ -39,7 +39,7 @@ st.title('True Skill Win Probabilities')
 
 player_1 = st.selectbox('Player One', sorted(wta_players))
 player_2 = st.selectbox('Player Two', sorted(wta_players))
-surface_pick = st.selectbox('Surface', ['Clay', 'Hard', 'Grass', 'Carpet'])
+surface_pick = st.selectbox('Surface', ['Hard', 'Clay', 'Grass', 'Carpet'])
 
 data = str(get_win_prob_women(p_1=player_1, p_2=player_2, surface=surface_pick))
 
